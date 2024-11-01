@@ -3,9 +3,9 @@ using namespace std;
 
 const int IDXMAX = 4;
 
-struct Smartphones{
-    string merk;
-    string tipe;
+struct InfoBuku{
+    string nama;
+    string penulis;
 };
 
 struct Stack{
@@ -35,7 +35,7 @@ Stack createStack(){
     return S;
 }
 
-void push(Stack &S, Smartphones P){
+void push(Stack &S, string judul, string penulis){
     if(isFull(S)){
         cout << "Stack Penuh" << endl;
     } else {
@@ -82,7 +82,7 @@ int main(){
     P.merk = "Samsung";
     P.tipe = "Galaxy A52";
 
-    push(S, P);
+    push(S, P.judul, P.penulis);
 
     printStack(S);
 
